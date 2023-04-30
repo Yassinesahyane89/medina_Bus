@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d0c95e4ba53a0bd3123651cf240f45f9",
+    "content-hash": "eba990662c6452e3dfa73db53bc649a7",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -3222,6 +3222,138 @@
                 }
             ],
             "time": "2023-04-15T23:01:58+00:00"
+        },
+        {
+            "name": "salahhusa9/laravel-menu",
+            "version": "v0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/salahhusa9/laravel-menu.git",
+                "reference": "15013884180f1d5d832c06b9ad653d62ab0b8f93"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/salahhusa9/laravel-menu/zipball/15013884180f1d5d832c06b9ad653d62ab0b8f93",
+                "reference": "15013884180f1d5d832c06b9ad653d62ab0b8f93",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^10.0",
+                "php": "^8.1",
+                "spatie/laravel-package-tools": "^1.14.0"
+            },
+            "require-dev": {
+                "laravel/pint": "^1.0",
+                "nunomaduro/collision": "^7.9",
+                "nunomaduro/larastan": "^2.0.1",
+                "orchestra/testbench": "^8.0",
+                "pestphp/pest": "^2.0",
+                "pestphp/pest-plugin-arch": "^2.0",
+                "pestphp/pest-plugin-laravel": "^2.0",
+                "phpstan/extension-installer": "^1.1",
+                "phpstan/phpstan-deprecation-rules": "^1.0",
+                "phpstan/phpstan-phpunit": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Salahhusa9\\Menu\\MenuServiceProvider"
+                    ],
+                    "aliases": {
+                        "Menu": "Salahhusa9\\Menu\\Facades\\Menu"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Salahhusa9\\Menu\\": "src",
+                    "Salahhusa9\\Menu\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "salahhusa9",
+                    "email": "salahhusa9@gmail.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Html menu generator for Laravel",
+            "homepage": "https://github.com/salahhusa9/laravel-menu",
+            "keywords": [
+                "laravel",
+                "laravel-menu",
+                "salahhusa9"
+            ],
+            "support": {
+                "issues": "https://github.com/salahhusa9/laravel-menu/issues",
+                "source": "https://github.com/salahhusa9/laravel-menu/tree/v0.0.1"
+            },
+            "time": "2023-03-21T21:13:11+00:00"
+        },
+        {
+            "name": "spatie/laravel-package-tools",
+            "version": "1.15.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/spatie/laravel-package-tools.git",
+                "reference": "efab1844b8826443135201c4443690f032c3d533"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/spatie/laravel-package-tools/zipball/efab1844b8826443135201c4443690f032c3d533",
+                "reference": "efab1844b8826443135201c4443690f032c3d533",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^9.28|^10.0",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "^1.5",
+                "orchestra/testbench": "^7.7|^8.0",
+                "pestphp/pest": "^1.22",
+                "phpunit/phpunit": "^9.5.24",
+                "spatie/pest-plugin-test-time": "^1.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Spatie\\LaravelPackageTools\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Freek Van der Herten",
+                    "email": "freek@spatie.be",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Tools for creating Laravel packages",
+            "homepage": "https://github.com/spatie/laravel-package-tools",
+            "keywords": [
+                "laravel-package-tools",
+                "spatie"
+            ],
+            "support": {
+                "issues": "https://github.com/spatie/laravel-package-tools/issues",
+                "source": "https://github.com/spatie/laravel-package-tools/tree/1.15.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/spatie",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-04-27T08:09:01+00:00"
         },
         {
             "name": "symfony/console",

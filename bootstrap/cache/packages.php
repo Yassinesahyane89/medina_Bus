@@ -48,6 +48,17 @@
       0 => 'Termwind\\Laravel\\TermwindServiceProvider',
     ),
   ),
+  'salahhusa9/laravel-menu' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Salahhusa9\\Menu\\MenuServiceProvider',
+    ),
+    'aliases' => 
+    array (
+      'Menu' => 'Salahhusa9\\Menu\\Facades\\Menu',
+    ),
+  ),
   'spatie/laravel-ignition' => 
   array (
     'providers' => 
