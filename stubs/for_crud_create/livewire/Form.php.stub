@@ -1,0 +1,46 @@
+<?php
+
+namespace App\Http\Livewire\{{LIVEWIRE_NAME}};
+
+use App\Models\{{MODEL_NAME}};
+use Illuminate\Support\Facades\Hash;
+use Livewire\Component;
+
+class Form extends Component
+{
+    public {{MODEL_NAME}} ${{NAME}};
+
+    protected function rules()
+    {
+        return [
+            '{{NAME}}.name' => 'required|min:6',
+        ];
+    }
+
+
+    public function mount(${{NAME}})
+    {
+        $this->{{NAME}} = ${{NAME}};
+    }
+
+    public function updated($propertyName)
+    {
+        $this->validateOnly($propertyName);
+    }
+
+    public function update()
+    {
+        $this->validate();
+
+        $this->{{NAME}}->save();
+
+        $this->dispatchBrowserEvent('toastr', ['type' => 'success', 'title' => 'success', 'message' => '{{NAME}} updated successfully!']);
+
+        return redirect('{{NAME}}');
+    }
+
+    public function render()
+    {
+        return view('livewire.{{NAME}}.form');
+    }
+}

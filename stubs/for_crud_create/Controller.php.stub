@@ -1,0 +1,29 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\{{MODEL_NAME}};
+
+class {{CONTROLLER_NAME}} extends Controller
+{
+    public function index()
+    {
+        return view('content.{{NAME}}.table');
+    }
+
+    public function create()
+    {
+        return view('content.{{NAME}}.form', [
+            '{{NAME}}' => new {{MODEL_NAME}}(),
+        ]);
+    }
+
+    public function edit($id)
+    {
+        ${{NAME}} = {{MODEL_NAME}}::find($id);
+
+        return view('content.{{NAME}}.form', [
+            '{{NAME}}' => ${{NAME}},
+        ]);
+    }
+}

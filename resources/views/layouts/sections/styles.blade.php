@@ -18,9 +18,12 @@
 <link rel="stylesheet" href="{{ asset(mix('assets/vendor/libs/node-waves/node-waves.css')) }}" />
 <link rel="stylesheet" href="{{ asset(mix('assets/vendor/libs/typeahead-js/typeahead.css')) }}" />
 
+@livewireStyles()
 <!-- Vendor Styles -->
 @yield('vendor-style')
 
-
 <!-- Page Styles -->
 @yield('page-style')
+@stack('page-style')
+
+<link rel="stylesheet" href="{{ asset(mix('assets/vendor/libs/toastr/toastr.css')) }}" />

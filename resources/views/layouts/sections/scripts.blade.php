@@ -12,11 +12,20 @@
 <!-- END: Page Vendor JS-->
 <!-- BEGIN: Theme JS-->
 <script src="{{ asset(mix('assets/js/main.js')) }}"></script>
-
+@livewireScripts()
 <!-- END: Theme JS-->
 <!-- Pricing Modal JS-->
 @stack('pricing-script')
 <!-- END: Pricing Modal JS-->
 <!-- BEGIN: Page JS-->
+@stack('page-script')
 @yield('page-script')
 <!-- END: Page JS-->
+<!-- BEGIN: Toastr JS-->
+<script src="{{ asset(mix('assets/vendor/libs/toastr/toastr.js')) }}"></script>
+<!-- END: Toastr JS-->
+<script>
+    window.addEventListener('toastr', event => {
+        toastr[event.detail.type](event.detail.message, event.detail.title ?? '')
+    })
+</script>
