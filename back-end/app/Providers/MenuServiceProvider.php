@@ -40,6 +40,10 @@ class MenuServiceProvider extends ServiceProvider
         ->addSubmenu('Schedules', function ($menu) {
           $menu->add('List Schedules', 'schedule.index');
           $menu->add('Add Schedule', 'schedule.create');
+        }, '')
+        ->addSubmenu('Admins', function ($menu) {
+          $menu->add('List Admins', 'admin.index');
+          $menu->add('Add admin', 'admin.create');
         }, '');
   }
 }

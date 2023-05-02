@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BusController;
 use App\Http\Controllers\dashboard\AccountController;
 use App\Http\Controllers\dashboard\HomePage;
@@ -72,4 +73,15 @@ Route::group(['controller' => ScheduleController::class, 'prefix' => 'dashboard/
   Route::get('create', 'create')->name('schedule.create');
   Route::get('edit/{id}', 'edit')->name('schedule.edit');
   Route::get('delete/{id}', 'delete')->name('schedule.delete');
+});
+
+/**
+ * admin
+ */
+
+Route::group(['controller' => AdminController::class, 'prefix' => 'dashboard/admin'], function () {
+  Route::get('/', 'index')->name('admin.index');
+  Route::get('create', 'create')->name('admin.create');
+  Route::get('edit/{id}', 'edit')->name('admin.edit');
+  Route::get('delete/{id}', 'delete')->name('admin.delete');
 });
